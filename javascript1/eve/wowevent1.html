@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>event1</title>
+    <link rel="stylesheet" href="eventcss.css">
+</head>
+
+<body>
+
+    <button onclick="open1('block'),write1('아이디를입력하세요')">버튼1</button>
+    <button onclick="write1('비밀번호를 입력하세요')">버튼2</button>
+
+    <div class="alert-box" id="alert">
+        <p id="text-box">을 입력하세요</p>
+        <button id="close1">닫기</button>
+    </div>
+
+
+    <script>
+        function open1(i) {
+            document.getElementById('alert').style.display = i;
+        }
+        function write1(i) {
+            document.getElementById('text-box').innerHTML = i;
+        }
+
+        document.getElementById('close1').addEventListener('mouseover', function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+        
+       
+    </script>
+</body>
+
+    
+</html>
