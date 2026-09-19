@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>document</title>
+        <link href="main.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id="login">로그인</button>
+        <div class="black-bg">
+            <button class="btn btn-danger" id="close">닫기</button>
+            <div class="white-bg show">
+                <h4>로그인하세요</h4>
+            </div>
+        </div> 
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+        <script>
+            
+            $('#login').on('click', function(){
+                    $('.black-bg').addClass(' show-modal');
+            });
+
+            $('#close').on('click', function(){
+                    $('.black-bg').toggleClass('show-modal');
+            });
+
+          
+        </script>
+
+    </body>
+</html>

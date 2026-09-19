@@ -1,0 +1,35 @@
+.main-bg {
+    padding : 100px 20px;
+    background : lightgrey;
+}
+.btn1 {
+    background-color: red;
+    border-radius: 5px;
+    font-size: 20px;
+    color: aliceblue;
+}
+.modal-good {
+    width: 100%;
+    height: 100%;
+    background : rgba(0,0,0,0.5);
+    position: fixed;
+    z-index : 5;
+    padding: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0s;
+}
+.Mshow {
+    visibility: visible;
+    opacity: 100;
+    transition: all 1s;
+}
+.bg-whi {
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+}
+.btn1-close {
+    font-size: 18px;
+    padding: 7px;
+}

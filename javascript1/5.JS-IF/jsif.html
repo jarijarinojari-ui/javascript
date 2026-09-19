@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>document</title>
+        <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <form class="loginform" type="submit">
+            <div class="modal-good">
+            <div class="bg-whi">
+                <input class='id-input'>
+                <br>
+                <input class="pw-input">
+                <button type="submit" id="sub1">전송</button>
+                <button type="button" class="btn1-close">닫기</button>
+            </div>
+
+        </div>
+        </form>
+        
+        
+
+        <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar</span>
+            <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        </nav> 
+
+        <div class="main-bg">
+            <h4>Shirts on Sale</h4>
+            <button id="login" class="btn1">로그인</button>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+        <script>
+            $('#login').on('click', function(){
+                
+                $('.modal-good').addClass(' Mshow');
+            });
+            $('.btn1-close').on('click', function() {
+                $('.modal-good').toggleClass(' Mshow');
+            })
+
+            $('form').on('submit',function(e){
+                 const username = document.querySelector('.id-input').value.trim();
+                const pw = document.querySelector('.pw-input').value.trim();
+                 if (username && pw) {
+                    alert('로그인성공');
+                    return null;
+                 } else {
+                    e.preventDefault();
+                    document.querySelector('.id-input').focus();
+                    alert('ㄴㄴㄴㄴㄴ');
+                    return e;
+                 }
+            });
+            
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
