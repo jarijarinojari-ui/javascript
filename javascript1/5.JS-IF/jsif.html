@@ -52,14 +52,24 @@
                  const username = document.querySelector('.id-input').value.trim();
                 const pw = document.querySelector('.pw-input').value.trim();
                  if (username && pw) {
-                    alert('로그인성공');
-                    return null;
-                 } else {
-                    e.preventDefault();
-                    document.querySelector('.id-input').focus();
-                    alert('ㄴㄴㄴㄴㄴ');
-                    return e;
-                 }
+                    username = document.querySelector('.id-input').value;
+                    if(username.length <= 6){
+                        alert('7자이상 작성하셈');
+                        return e.preventDefault();
+                        }
+                        if(pw.length <= 6){
+                            alert('7자이상 작성하셈');
+                            return e.preventDefault();
+                        }
+
+                        alert('로그인성공');
+                        return null;
+                    } else {
+                        e.preventDefault();
+                        document.querySelector('.id-input').focus();
+                        alert('ㄴㄴㄴㄴㄴ');
+                        return e;
+                    }
             });
             
         </script>
