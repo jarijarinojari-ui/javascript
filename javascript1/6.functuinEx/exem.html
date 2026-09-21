@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document</title>
+    <meta charset="UTF-8">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="backgraund">
+        <div>
+            <h3>369 확인 프로그램</h3>
+            <p>숫자를 입력하세요</p>
+            <input type="number" id="a">
+            <button class="btn-th">전송</button>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        //전송을 누르면 인풋에 숫자가 있는 지 확인한다. 
+        // 숫자가 3의 배수인지 확인하고 '숫자'는 3의 배수 입니다. 출력후 칸에 있는 값을 삭제
+        
+                $('.btn-th').on('click', 삼육구게임)
+        
+        function 삼육구게임() {
+            var number1 = document.querySelector('#a').value;
+            if( number1%3 == 0&& number1 != 0){
+                if (number1%9 == 0){
+                    alert('짝짝');
+                    return;
+                }
+                alert(number1+'은 3의 배수입니다.');
+                
+                return ;
+            } else {
+                alert(number1+'은 3의 배수가 아닙니다.');
+                n = document.querySelector('#a');
+                n.value = "";
+                return ;
+            }
+        }
+    </script>
+</body>
+</html>

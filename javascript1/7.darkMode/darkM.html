@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document</title>
+    <meta charset="UTF-8">
+    <link href="a.css" rel="stylesheet">
+</head>
+<body>
+    <span class="badge bg-dark">Dark 🔄</span>
+    <div class="ab">
+        <span id="time1"></span><span>초 이내 구매시 사은품 증정</span>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    var p1 = document.querySelector('#time1');
+    p1.textContent = 5;
+    var i = 5;
+    
+    setInterval(ass,1000);
+    
+    
+    function ass() {
+        i--;
+        if (i<0){
+            document.querySelector('.ab').style.display = 'none';
+            console.log('end');
+        }
+        
+        console.log(i);
+        p1.textContent = i;
+    }
+
+</script>
+</html>
