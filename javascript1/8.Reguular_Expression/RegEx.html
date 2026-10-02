@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doc</title>
+    <link href="main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form class="lf" type="submit">
+        <input class="id-in" value="이메일">
+        <input class="pw-in" value="비밀번호">
+        <button type="submit">전송</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script>
+    // 폼 전송시에 유저가 입력한 비번에 영어 대문자가 적어도 1개 있는지 검사하기
+
+
+    // 1 로그인 기능만들기 빈칸이 있는지 확인
+    $('form').on('submit', function(e){
+        const usId = document.querySelector('.id-in').value.trim();
+        const usPw = document.querySelector('.pw-in').value.trim();
+        if( usPw && usId ){
+            if( /\S+@\S+\.\S+/.test(usId) ){
+                alert('로그인성공');
+                return null;
+            }
+            e.preventDefault();
+            alert('이메일 형식을 지키셈');
+            return e;
+        }else {
+            e.preventDefault();
+            alert('아이디 혹은 비밀번호를 입력하세요.');
+            return e;
+        }
+        
+    })
+
+    // 2 로그인시 이메일 양식을 지켰는지
+    // 3. 누를때 비번 인풋 안에 있는 내용을 확인
+    //내용에 영어 대문자가 적어도 한개이상 -> 하나라도 이 있어야 한다.
+
+</script>
+</body>
+</html>
